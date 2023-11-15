@@ -49,9 +49,7 @@
 .bodyIntro {
     margin: 0px;
 }
-.bodyGaleria{
-    background-image: url(/MODULO2/PROYECTO3/PROYECTO3/Proyecto-3/img/backgroundGaleria.png);
-}
+
 .ground1 {
     display: grid;
     background-image: url(./img/Artboard\ 2.png);
@@ -131,7 +129,9 @@
 
 /* ____________________________________________________________ */
 /* ESTILOS PAGINA DE GRAFICOS Y TARJETAS */
-
+.bodyGaleria{
+    background-image: url(./img/backgroundGaleria.png);
+}
 
 .Tarjeta{
     display: grid;
