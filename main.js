@@ -5,12 +5,13 @@ const crear = document.getElementById("crearTarjeta");
 const urlApi = "https://huachitos.cl/api/animales";
 // const urlApiTipo = `https://huachitos.cl/api/animales/tipo/${tipoAnimal}`
 
-const obtenerDatos = async (e) => {
-  e.preventDefault();
+
+// FUNCION PARA FETCH
+const obtenerDatos = async () => {
+  // e.preventDefault(); /* desactive el boton, ya que el landing ya tiene uno */
   const response = await fetch(urlApi);
   const respuestaJson = await response.json();
   console.log(respuestaJson);
-
   const imagen = respuestaJson.data.map((elemento) => elemento.imagen);
   const esterilizado = respuestaJson.data.map(
     (elemento) => elemento.esterilizado
@@ -22,31 +23,26 @@ const obtenerDatos = async (e) => {
   const nombre = respuestaJson.data.map((elemento) => elemento.nombre);
 
   crearGrafico(edad, nombre, vacunas, esterilizado);
-
   crear.innerHTML = "";
   respuestaJson.data.map((element) => {
     crear.innerHTML += creartarjeta(element);
   });
 };
 
-const pasaredadAmeses = (edad) => {
-  const arrayEdad = edad.split(" ");
-  console.log(arrayEdad);
-  if (arrayEdad[1] === "Años" || arrayEdad[1] === "Año") {
-    return parseInt(arrayEdad[0]) * 12;
-  }
-  return parseInt(arrayEdad[0]);
-};
+
+
 
 const crearGrafico = (datos, etiquetas, vacunas, esterilizado) => {
   new Chart(ctx, {
     type: "bar",
     data: {
       labels: etiquetas,
+      fontColor: 'blue',
       datasets: [
         {
           label: "Edad en meses",
           data: datos,
+          borderColor: '#111111',
           backgroundColor: [
             "rgba(255, 99, 132, 100)",
             "rgba(255, 159, 64, 100)",
@@ -56,11 +52,12 @@ const crearGrafico = (datos, etiquetas, vacunas, esterilizado) => {
             "rgba(153, 102, 255,100)",
             "rgba(201, 203, 207,100)",
           ],
-          borderWidth: 2,
+          borderWidth: 1,
         },
         {
           label: "Vacunas",
           data: vacunas,
+          borderColor: '#111111',
           backgroundColor: [
             "rgba(255, 99, 132, 100)",
             "rgba(255, 159, 64, 100)",
@@ -70,11 +67,12 @@ const crearGrafico = (datos, etiquetas, vacunas, esterilizado) => {
             "rgba(153, 102, 255,100)",
             "rgba(201, 203, 207,100)",
           ],
-          borderWidth: 2,
+          borderWidth: 1,
         },
         {
           label: "Esterilizado",
           data: esterilizado,
+          borderColor: '#111111',
           backgroundColor: [
             "rgba(255,99,132,100)",
             "rgba(255,159,64,100)",
@@ -97,9 +95,15 @@ const crearGrafico = (datos, etiquetas, vacunas, esterilizado) => {
     },
   });
 };
-{
-  /* <div class:"tarjeta"> */
-}
+const pasaredadAmeses = (edad) => {
+  const arrayEdad = edad.split(" ");
+  console.log(arrayEdad);
+  if (arrayEdad[1] === "Años" || arrayEdad[1] === "Año") {
+    return parseInt(arrayEdad[0]) * 12;
+  }
+  return parseInt(arrayEdad[0]);
+};
+
 const creartarjeta = (data) => {
   const tarjeta = `
   <div class="tarjetaInner">
@@ -121,4 +125,5 @@ const creartarjeta = (data) => {
   return tarjeta;
 };
 
-solicitar.addEventListener("click", obtenerDatos);
+obtenerDatos()
+// solicitar.addEventListener("click", obtenerDatos);
