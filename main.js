@@ -101,7 +101,7 @@ const crearGrafico = (datos, etiquetas,vacunas,esterilizado) => {
 
 const  creartarjeta = (data) =>{
   const tarjeta = `
-  <div>
+  <div class:'tarjeta'>
   <img src= ${data.imagen} alt="">
   
   <h3>${data.nombre}</h3>

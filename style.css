@@ -1,0 +1,173 @@
+/* CSS INTRO */
+.bodyIntro {
+    margin: 0px;
+
+
+}
+.tarjeta{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+a:hover {
+    cursor: pointer;
+  }
+  a {
+    color: #111111;
+    text-decoration: none;
+    /* Para eliminar el subrayado por defecto de los enlaces */
+  }
+.ground1 {
+    display: grid;
+    background-image: url(./img/Artboard\ 2.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 700px;
+}
+
+.logoNav {
+    height: 120px;
+    width: 120px;
+
+}
+
+.navBar {
+    padding-top: 0px;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 1fr;
+    height: 100px;
+    width: 70%;
+}
+
+.userIcon2 {
+    height: 40px;
+    width: 40px;
+}
+
+.bannerJumbo {      
+    display: grid;
+    height: 500px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+.divSpanJumbo {
+    justify-self: center;
+    align-self: top;
+    color: azure;
+    padding-top: 30px;
+}
+
+.spanJumbo {
+
+    font-family: 'indie flower';
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.divBotonJumbo {
+    display: grid;
+    justify-content: center;
+    justify-self: center;
+    align-self: top;
+    height: 40px;
+    width: 400px;
+    border-radius: 20px;
+    background-color: #9bec52;
+    color: rgb(37, 104, 163);
+    /* font-size: 20px; */
+    border: 4px;
+    font-family: 'play pen';
+
+}
+
+.botonJumbo {
+    display: grid;
+    justify-self: center;
+    /* align-self: center; */
+    height: 40px;
+    width: 400px;
+    border-radius: 20px;
+    background-color: #9bec52;
+    color: rgb(37, 104, 163);
+    font-size: 20px;
+    border: 4px;
+    font-family: 'play pen';
+}
+.textBotonJumbo{
+    text-align: center;
+    align-self: center;
+    font-family: 'indie flower';
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.titular {
+    font-family: 'permanent marker';
+    font-size: 60px;
+    color: white;
+    text-shadow: 1px 2px 3px rgba(42, 42, 42, 0.326);
+    justify-self: center;
+    letter-spacing: 15px;
+}
+
+.sMayus {
+    font-size: 100px;
+}
+
+.cMayus {
+    font-size: 100px;
+
+}
+
+
+
+
+
+
+/* ____________________________________________________________ */
+#tarjetaPersonaje {
+    display: grid;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: rgb(252, 244, 232);
+    display: grid;
+    grid-template-rows: 1fr 1r 1fr;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.imgtarjeta {
+    height: 300px;
+}
+
+#imgDefaults {
+    display: grid;
+    height: 100%;
+    background-color: rgb(252, 244, 232);
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    border-bottom: solid 1px;
+}
+
+.imgmini {
+    width: 20%;
+}
+
+#titulos {
+    text-align: center;
+}
+
+.chart {
+    height: 300px;
+    width: 300px;
+    justify-items: center;
+}
