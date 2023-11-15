@@ -1,22 +1,10 @@
 /* CSS INTRO */
 .bodyIntro {
     margin: 0px;
-
-
 }
-.tarjeta{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+.bodyGaleria{
+    background-image: url(/MODULO2/PROYECTO3/PROYECTO3/Proyecto-3/img/backgroundGaleria.png);
 }
-a:hover {
-    cursor: pointer;
-  }
-  a {
-    color: #111111;
-    text-decoration: none;
-    /* Para eliminar el subrayado por defecto de los enlaces */
-  }
 .ground1 {
     display: grid;
     background-image: url(./img/Artboard\ 2.png);
@@ -134,40 +122,57 @@ a:hover {
 
 
 /* ____________________________________________________________ */
-#tarjetaPersonaje {
+/* ESTILOS PAGINA DE GRAFICOS Y TARJETAS */
+
+
+.Tarjeta{
     display: grid;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    background-color: rgb(252, 244, 232);
-    display: grid;
-    grid-template-rows: 1fr 1r 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
     justify-items: center;
+    margin-top: 30px;
+    
 }
-
-.imgtarjeta {
-    height: 300px;
-}
-
-#imgDefaults {
+.tarjetaInner{
     display: grid;
-    height: 100%;
-    background-color: rgb(252, 244, 232);
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    border: solid 1px;
     justify-items: center;
-    border-bottom: solid 1px;
-}
-
-.imgmini {
-    width: 20%;
-}
-
-#titulos {
-    text-align: center;
-}
-
-.chart {
-    height: 300px;
     width: 300px;
+    padding: 10px;
+    border: solid 5px rgb(243, 231, 139);
+    border-radius: 15px;
+}
+
+.textosBottom{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20px 20px 20px 1fr;
+    font-size: 9px;
+
+}
+
+img{
+width: 270px;
+height: 270px;
+object-fit: contain;
+}
+
+/* estilos de links */
+a:hover {
+    cursor: pointer;
+  }
+  a {
+    color: #111111;
+    text-decoration: none;
+    /* Para eliminar el subrayado por defecto de los enlaces */
+  }
+  
+/* ESTILOS DEL GRAFICO */
+.grafico{
+    display: grid;
     justify-items: center;
+    height: 500px;
 }
