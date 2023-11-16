@@ -127,3 +127,103 @@ const creartarjeta = (data) => {
 
 obtenerDatos()
 // solicitar.addEventListener("click", obtenerDatos);
+
+
+
+
+
+// Graficos Finales
+
+document.addEventListener('DOMContentLoaded', function() {
+  const urlApi = 'https://huachitos.cl/api/animales';
+
+  // Función para obtener los datos desde la API
+  const obtenerDatosDesdeAPI = async () => {
+    try {
+      const response = await fetch(urlApi);
+      if (!response.ok) {
+        throw new Error('No se pudo obtener los datos');
+      }
+      const data = await response.json();
+      return data.data;
+    } catch (error) {
+      console.error('Error al obtener los datos:', error);
+      return [];
+    }
+  };
+
+  // Función para generar los gráficos
+  const generarGraficos = (datosAnimales) => {
+    const perros = datosAnimales.filter(animal => animal.tipo === 'Perro').length;
+    const gatos = datosAnimales.filter(animal => animal.tipo === 'Gato').length;
+
+    const esterilizados = datosAnimales.filter(animal => animal.esterilizado).length;
+    const noEsterilizados = datosAnimales.length - esterilizados;
+
+    const edades = datosAnimales.map(animal => {
+      const arrayEdad = animal.edad.split(" ");
+      if (arrayEdad[1] === "Años" || arrayEdad[1] === "Año") {
+        return parseInt(arrayEdad[0]) * 12;
+      }
+      return parseInt(arrayEdad[0]);
+    });
+
+    // Gráfico de % de perros versus gatos (circular)
+    const ctxPerrosGatos = document.getElementById('graficoPerrosGatos').getContext('2d');
+    new Chart(ctxPerrosGatos, {
+      type: 'doughnut',
+      data: {
+        labels: ['Perros', 'Gatos'],
+        datasets: [{
+          label: '% de Perros y Gatos',
+          data: [perros, gatos],
+          backgroundColor: ['#D35400', '#273746'], 
+        }],
+      },
+    });
+
+  
+    // Gráfico de % de esterilizados (circular)
+    const ctxEsterilizado = document.getElementById('graficoEsterilizado').getContext('2d');
+    new Chart(ctxEsterilizado, {
+      type: 'doughnut',
+      data: {
+        labels: ['Esterilizados', 'No Esterilizados'],
+        datasets: [{
+          label: '% de Esterilizados',
+          data: [esterilizados, noEsterilizados],
+          backgroundColor: ['#FFCE56', '#6E2C00'],
+        }],
+      },
+    });
+
+    // Gráfico de edades (barras)
+    const ctxEdad = document.getElementById('graficoEdad').getContext('2d');
+    new Chart(ctxEdad, {
+      type: 'bar',
+      data: {
+        labels: [...new Set(edades)], // Filtrar edades únicas
+        datasets: [{
+          label: 'Edades de los Animales',
+          data: edades,
+          backgroundColor: '#CB4335',
+        }],
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
+    });
+  };
+
+  // Función principal para iniciar la obtención de datos y generar gráficos
+  const iniciar = async () => {
+    const datosAnimales = await obtenerDatosDesdeAPI();
+    generarGraficos(datosAnimales);
+  };
+
+  iniciar(); // Iniciar el proceso al cargar la página
+});
