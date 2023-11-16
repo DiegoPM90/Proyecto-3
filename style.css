@@ -179,11 +179,24 @@ a:hover {
     text-decoration: none;
     /* Para eliminar el subrayado por defecto de los enlaces */
   }
-  
-/* ESTILOS DEL GRAFICO */
-.grafico{
-    display: grid;
-    justify-items: center;
-    height: 500px;
+
+
+
+/* Estilos Graficos*/
+
+.graficos {
+    display: flex;
     margin-top: 20px;
-}
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+.graficos canvas{
+    max-width: 200px; 
+    max-height: 200px; 
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+
+
