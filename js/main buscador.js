@@ -122,7 +122,7 @@ const creartarjeta = (data) => {
 
   </div>  
   <div class="divWsp">  
-  <a target="_blank" href="https://wa.me/+56955832683" class="buttonWsp">
+  <a target="_blank" href="https://wa.me/+56975467484" class="buttonWsp">
   <i class="wp">¡Contacta a ${data.nombre}!</i>
   <i class="fab fa-whatsapp wp"></i>
 </a>
