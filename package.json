@@ -1,0 +1,21 @@
+{
+  "name": "animapi",
+  "version": "0.1.0",
+  "description": "consumo de api con grafico e imagenes",
+  "type": "module",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "adopcion",
+    "api",
+    "chartjs",
+    "nodejs"
+  ],
+  "author": "Sebastian A Diego H Jose V Paz V",
+  "license": "ISC"
+}
