@@ -117,8 +117,14 @@ const creartarjeta = (data) => {
   <h3 class="textoTarjeta">${data.edad}</h3>
   <h3 class="textoTarjeta">${data.comuna}</h3>
   <h3 class="textoTarjeta">${data.desc_personalidad}</h3>
-  
   </div>
+
+  </div>  
+  <div class="divWsp">  
+  <button class="buttonWsp">
+  <i class="wsp">¡Contacta a ${data.nombre}!</i> 
+  <a target="_blank" href="https://wa.me/+56955832683"><i class="fab fa-whatsapp wsp"></i></a>
+  </button>
   </div>
   </div>
   `;
