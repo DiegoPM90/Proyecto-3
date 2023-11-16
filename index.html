@@ -1,33 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
 
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BuscaPatitas</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Alfa+Slab+One&family=Bad+Script&family=Bruno+Ace&family=Cinzel+Decorative&family=Edu+TAS+Beginner:wght@400;500&family=Fjalla+One&family=Indie+Flower&family=Kdam+Thmor+Pro&family=Libre+Barcode+39+Extended+Text&family=PT+Serif:ital@0;1&family=Permanent+Marker&family=Petit+Formal+Script&family=Playpen+Sans:wght@600&family=Raleway:wght@400;500;600;700&family=Tangerine:wght@400;700&family=Tilt+Warp&family=Zen+Dots&display=swap" rel="stylesheet">  
-  <link rel="stylesheet" href="./style.css" />
+  <meta charset="utf-8">
+  <title>Busca🐶Patitas | Encuentra tu PARTNER</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  
+  <!-- Bootstrap CSS File -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS  -->
+  <link href="css/style index.css" rel="stylesheet">
 </head>
+<body>
 
-<body class="bodyIntro">
-  <div class="ground1">
-    <div class="navBar">
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+    <div class="container">
+       <!-- Logo -->
+      <img class="logoNav" src="./img/Logo.png" width="300"/>
+     
+       <!-- Boton movil collapsado -->
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-      <img class="logoNav" src="./img/DogCatIcon.png" alt="" />
-      <span class="titular"><span class="sMayus">B</span>usca<span class="cMayus">P</span>atitas</span>
-      <img class="userIcon" src="./img/userGreen.svg" alt="" />
+       <!-- Menu -->
+      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#">🐈Quienes Somos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#">💭 Contacto</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#">🫂Iniciar Sesión</a>
+          </li>
+
+
+        </ul>
+      </div>
     </div>
-    <div class="bannerJumbo">
-      <div class="divSpanJumbo"><span class="spanJumbo">¡La mejor compañía, a un solo click!</span></div>
-      <div class="divBotonJumbo"><button class="botonJumbo" type="submit"><a id="textBotonJumbo" class="textBotonJumbo" href="./index2.html">¡Encuentra!</a></div>
+  </nav>
+ 
+
+  <!-- Introduccion Centrada -->
+  <div id="home" class="intro route bg-image" style="background-image: url(img/bg1.png)">
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table">
+      <div class="table-cell">
+        <div class="container">
+         
+          <h1 class="intro-title mb-4">Adopta la mejor compañía</h1>
+          <p class="intro-subtitle"><span class="text-slider-items">Perritos, Gatitos, Michis, Cachupines </span><strong class="text-slider"></strong></p>
+         <a href="./Buscador.html"><p class="pt-3"><div class="divBotonJumbo"><button class="botonJumbo" type="submit"><a id="textBotonJumbo" class="textBotonJumbo" href="./Buscador.html">¡Encuentra!</a></div></p></a> 
+          <p><span class="grupo3">  Proyecto 3 - Equipo 1: Sebastián A. - Diego H. - Paz V. - Jose V.</span></p>
+        </div>
+      </div>
     </div>
-<span class="grupo3">  Proyecto 3 - Equipo 1: Sebastian F. - Diego H. - Paz V. - Jose V.</span>
   </div>
-  <div>
-    <div class="bannerJumbo2"></div>
-  </div>
+  
+
+
+
+  <!-- JS Librerias-->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+  <script src="lib/counterup/jquery.counterup.js"></script>
+  <script src="lib/typed/typed.min.js"></script>
+  <script src="js/main index.js"></script>
+
 </body>
-
 </html>
+
+
