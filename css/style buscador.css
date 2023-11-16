@@ -1,0 +1,229 @@
+/* ESTILOS LANDING Y NAVBAR */
+
+/* ESTILOS NABVAR (COMPARTIDA) */
+.navBar {
+    padding-top: 0px;
+    justify-self: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.341), rgba(255, 255, 255, 0));
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 1fr;
+    height: 120px;
+    width: 100%;
+    border-bottom: solid 1px white;
+
+}
+
+
+
+.titular {
+    font-family: 'permanent marker';
+    font-size: 50px;
+    color: white;
+    text-shadow: 1px 2px 3px rgba(42, 42, 42, 0.326);
+    justify-self: center;
+    letter-spacing: 15px;
+}
+
+.sMayus {
+    font-size: 70px;
+}
+
+.cMayus {
+    font-size: 70px;
+
+}
+
+
+.userIcon {
+    height: 60px;
+    width: 60px;
+}
+
+/* ESTILOS LANDING */
+.bodyIntro {
+    margin: 0px;
+}
+
+
+.bannerJumbo {
+    display: grid;
+    height: 500px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+.divSpanJumbo {
+    justify-self: center;
+    align-self: top;
+    color: azure;
+    text-shadow: 1px 2px 3px rgba(42, 42, 42, 0.326);
+
+}
+
+.spanJumbo {
+
+    font-family: 'indie flower';
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.divBotonJumbo {
+    display: grid;
+    justify-content: center;
+    justify-self: center;
+}
+
+.botonJumbo {
+    display: grid;
+    justify-self: center;
+    height: 40px;
+    width: 400px;
+    border-radius: 20px;
+    background-color: #72ae3d;
+    border: solid 3px white;
+    font-size: 20px;
+    font-family: 'play pen';
+}
+
+.textBotonJumbo {
+    text-align: center;
+    align-self: center;
+    font-family: 'indie flower';
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.grupo3 {
+    display: grid;
+    justify-self: center;
+    align-self: flex-end;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+
+}
+
+
+
+
+
+
+
+/* ____________________________________________________________ */
+/* ESTILOS PAGINA DE GRAFICOS Y TARJETAS */
+
+
+.Tarjeta {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+    margin-top: 30px;
+
+}
+
+.tarjetaInner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    width: 300px;
+   height: 550px;
+    padding: 20px;
+    border: solid 5px rgb(162, 238, 255);
+    border-radius: 15px;
+
+}
+.tarjetaBottom{
+    display: grid;
+    height: fit-content;
+}
+.textosBottom {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 23px 23px 23px 0.5fr;
+    font-size: 12px;
+
+}
+
+
+.tarjetaBottom h2{
+    color: #ffffff;
+    
+}
+
+img {
+    width: 270px;
+    height: 270px;
+    object-fit: contain;
+}
+.divWsp{
+    display: grid;
+    height: 40px;
+}
+.buttonWsp {
+    display: grid;
+    grid-template-columns: 1fr 0.2fr;
+    grid-template-rows: 1fr;
+    width: 250px;
+    padding: 10px;
+    height: 40px;
+    border: none;
+    border-radius: 100px;
+    background-color: #00c63f;
+    color: white;
+    align-items: center;
+    cursor: pointer;
+    padding:5px;
+}
+
+.buttonWsp:hover {
+    padding: 10px;
+    width: 240px;
+    border-radius: 100px;
+    background-color: rgb(56, 183, 2);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+
+
+
+/* estilos de links para eliminar azul por defecto y hover pointer */
+a:hover {
+    cursor: pointer;
+}
+
+a {
+    color: #111111;
+    color: #ffffff;
+    text-decoration: none;
+    /* Para eliminar el subrayado por defecto de los enlaces */
+}
+
+
+
+/* Estilos Graficos*/
+
+.graficos {
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+
+.graficos canvas {
+    max-width: 200px;
+    max-height: 200px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+
