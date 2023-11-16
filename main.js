@@ -116,7 +116,7 @@ const creartarjeta = (data) => {
   <h3 class="textoTarjeta">${data.nombre}</h3>
   <h3 class="textoTarjeta">${data.edad}</h3>
   <h3 class="textoTarjeta">${data.comuna}</h3>
-  <h3 class="textoTarjeta">${data.desc_adicional}</h3>
+  <h3 class="textoTarjeta">${data.desc_personalidad}</h3>
   
   </div>
   </div>
