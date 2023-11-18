@@ -2,7 +2,8 @@
 
 # Proyecto-3 
  
-![Uploading Logo Buscador.png…]()
+![Logo Buscador](https://github.com/DiegoPM90/Proyecto-3/assets/140351890/2b6dc388-35a8-4f73-ab7c-d376b495138b)
+
 
 
 * [1. Introducción](#1-introducción)
