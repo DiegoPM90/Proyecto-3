@@ -1,5 +1,8 @@
+import {crearGrafico} from "../grafico.js";
+import {crearTarjeta} from "../card.js";
+
 const solicitar = document.getElementById("solicitar");
-const ctx = document.getElementById("myChart");
+
 const crear = document.getElementById("crearTarjeta");
 
 const urlApi = "https://huachitos.cl/api/animales";
@@ -25,76 +28,11 @@ const obtenerDatos = async () => {
   crearGrafico(edad, nombre, vacunas, esterilizado);
   crear.innerHTML = "";
   respuestaJson.data.map((element) => {
-    crear.innerHTML += creartarjeta(element);
+    crear.innerHTML += crearTarjeta(element);
   });
 };
 
 
-
-
-const crearGrafico = (datos, etiquetas, vacunas, esterilizado) => {
-  new Chart(ctx, {
-    type: "bar",
-    data: {
-      labels: etiquetas,
-      fontColor: 'blue',
-      datasets: [
-        {
-          label: "Edad en meses",
-          data: datos,
-          borderColor: '#111111',
-          backgroundColor: [
-            "rgba(255, 99, 132, 100)",
-            "rgba(255, 159, 64, 100)",
-            "rgba(255, 205, 86, 100)",
-            "rgba(75, 192, 192, 100)",
-            "rgba(54, 162, 235, 100)",
-            "rgba(153, 102, 255,100)",
-            "rgba(201, 203, 207,100)",
-          ],
-          borderWidth: 1,
-        },
-        {
-          label: "Vacunas",
-          data: vacunas,
-          borderColor: '#111111',
-          backgroundColor: [
-            "rgba(255, 99, 132, 100)",
-            "rgba(255, 159, 64, 100)",
-            "rgba(255, 205, 86, 100)",
-            "rgba(75, 192, 192, 100)",
-            "rgba(54, 162, 235, 100)",
-            "rgba(153, 102, 255,100)",
-            "rgba(201, 203, 207,100)",
-          ],
-          borderWidth: 1,
-        },
-        {
-          label: "Esterilizado",
-          data: esterilizado,
-          borderColor: '#111111',
-          backgroundColor: [
-            "rgba(255,99,132,100)",
-            "rgba(255,159,64,100)",
-            "rgba(255,205,86,100)",
-            "rgba(75,192,192,100)",
-            "rgba(54,162,235,100)",
-            "rgba(153,102,255,100)",
-            "rgba(201,203,207,100)",
-          ],
-          borderWidth: 1,
-        },
-      ],
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true,
-        },
-      },
-    },
-  });
-};
 const pasaredadAmeses = (edad) => {
   const arrayEdad = edad.split(" ");
   console.log(arrayEdad);
@@ -104,34 +42,34 @@ const pasaredadAmeses = (edad) => {
   return parseInt(arrayEdad[0]);
 };
 
-const creartarjeta = (data) => {
-  const tarjeta = `
-  <div class="tarjetaInner">
+// const creartarjeta = (data) => {
+//   const tarjeta = `
+//   <div class="tarjetaInner">
  
-  <img src= ${data.imagen} alt="">
+//   <img src= ${data.imagen} alt="">
 
-<div class="tarjetaBottom">
-<div class="textosBottom">
+// <div class="tarjetaBottom">
+// <div class="textosBottom">
 
-  <h2 class="textoTarjeta">${data.nombre}</h2>
-  <p>&nbsp;</p>
-  <h3 class="textoTarjeta">${data.edad}</h3>
-  <h3 class="textoTarjeta">${data.comuna}</h3>
-  <h3 class="textoTarjeta">${data.desc_personalidad}</h3>
-  </div>
+//   <h2 class="textoTarjeta">${data.nombre}</h2>
+//   <p>&nbsp;</p>
+//   <h3 class="textoTarjeta">${data.edad}</h3>
+//   <h3 class="textoTarjeta">${data.comuna}</h3>
+//   <h3 class="textoTarjeta">${data.desc_personalidad}</h3>
+//   </div>
 
-  </div>  
-  <div class="divWsp">  
-  <a target="_blank" href="https://wa.me/+56975467484" class="buttonWsp">
-  <i class="wp">¡Contacta a ${data.nombre}!</i>
-  <i class="fab fa-whatsapp wp"></i>
-</a>
-  </div>
-  </div>
+//   </div>  
+//   <div class="divWsp">  
+//   <a target="_blank" href="https://wa.me/+56975467484" class="buttonWsp">
+//   <i class="wp">¡Contacta a ${data.nombre}!</i>
+//   <i class="fab fa-whatsapp wp"></i>
+// </a>
+//   </div>
+//   </div>
   
-  `;
-  return tarjeta;
-};
+//   `;
+//   return tarjeta;
+// };
 
 obtenerDatos()
 // solicitar.addEventListener("click", obtenerDatos);
@@ -203,7 +141,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
 
-  
     // Gráfico de % de esterilizados (circular)
     const ctxEsterilizado = document.getElementById('graficoEsterilizado').getContext('2d');
     new Chart(ctxEsterilizado, {
@@ -263,11 +200,7 @@ new Chart(ctxEdad, {
     }
   }
 });
-
-
-
-
-    
+  
   };
 
   // Función principal para iniciar la obtención de datos y generar gráficos
