@@ -17,7 +17,7 @@ En este proyecto, nos propusimos crear una página web dinámica que respondiera
 [Url del proyecto](https://diegopm90.github.io/Proyecto-3/)
 
 
-Vinculo para visualizar la Pagina Web: [Enlace] (https://diegopm90.github.io/Proyecto-3/index.html)
+Vinculo para visualizar la Pagina Web: [Enlace] (https://sebaao.github.io/DWFS-Proyecto-3/)
 
 
 
