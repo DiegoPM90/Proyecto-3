@@ -1,3 +1,5 @@
+import {crearTarjeta} from './cards.js';
+
 // Graficos Finales (Perros vs Gatos, Esterilizados, Edad)
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -119,11 +121,7 @@ new Chart(ctxEdad, {
     }
   }
 });
-
-
-
-
-    
+  
   };
 
   // Función principal para iniciar la obtención de datos y generar gráficos
@@ -134,33 +132,6 @@ new Chart(ctxEdad, {
 
   iniciar(); // Iniciar el proceso al cargar la página
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // Tarjeta de Animales
@@ -181,7 +152,7 @@ const obtenerDatos = async () => {
     const { data } = respuestaJson;
 
     // Limpiar las tarjetas existentes
-    limpiarTarjetas();
+  
 
     // Crear tarjetas con los datos obtenidos de la API
     data.forEach((element) => {
@@ -190,38 +161,6 @@ const obtenerDatos = async () => {
   } catch (error) {
     console.error('Error al obtener los datos:', error);
   }
-};
-
-// Función para crear una tarjeta con información del animal y agregarla al HTML
-const crearTarjeta = (data) => {
-  const tarjeta = `
-    <div class="tarjetaInner">
-      <img src="${data.imagen}" alt="">
-      <div class="tarjetaBottom">
-        <div class="textosBottom">
-          <h2 class="textoTarjeta">${data.nombre}</h2>
-          <p>&nbsp;</p>
-          <h3 class="textoTarjeta">${data.edad}</h3>
-          <h3 class="textoTarjeta">${data.comuna}</h3>
-          <h3 class="textoTarjeta">${data.desc_personalidad}</h3>
-        </div>
-      </div>  
-      <div class="divWsp">  
-        <a target="_blank" href="https://wa.me/+56975467484" class="buttonWsp">
-          <i class="wp">¡Contacta a ${data.nombre}!</i>
-          <i class="fab fa-whatsapp wp"></i>
-        </a>
-      </div>
-    </div>
-  `;
-  const crear = document.getElementById("crearTarjeta");
-  crear.innerHTML += tarjeta;
-};
-
-// Función para limpiar las tarjetas existentes
-const limpiarTarjetas = () => {
-  const crear = document.getElementById("crearTarjeta");
-  crear.innerHTML = "";
 };
 
 // Ejecutar la función principal para obtener datos y generar tarjetas
