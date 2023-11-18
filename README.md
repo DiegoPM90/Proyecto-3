@@ -2,12 +2,13 @@
 
 # Proyecto-3 
  
-![](https://raw.githubusercontent.com/DiegoPM90/Proyecto-3/33e6f51a0476b7b786162ea0e5632e1cdececd0f/img/Logo%20Buscador.png)
+![Uploading Logo Buscador.png…]()
 
-* [1. Introducción](#1-introduccion)
+
+* [1. Introducción](#1-introducción)
 * [2. Enlace](#2-enlace)
-* [3. Descripción](#3-descripcion)
-* [4. Conclusión](#4-conclusion)
+* [3. Descripción](#3-descripción)
+* [4. Conclusión](#4-conclusión)
 
 ## 1. Introducción
 
