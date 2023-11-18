@@ -1,6 +1,7 @@
-# Informe PROYECTO 3, GRUPO 1, Cohorte 10, Desarrollo Web Full Stack del Bootcamp UDD. 
-
 # Proyecto-3 
+
+#GRUPO 1,Desarrollo Web Full Stack del Bootcamp UDD. 
+
  
 ![Logo Buscador](https://github.com/sebaao/DWFS-Proyecto-3/assets/140351890/52d4eeb2-98a9-4a12-b24e-49852cc7891f)
 
