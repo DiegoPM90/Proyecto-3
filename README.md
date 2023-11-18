@@ -2,7 +2,8 @@
 
 # Proyecto-3 
  
-![](https://raw.githubusercontent.com/DiegoPM90/Proyecto-3/33e6f51a0476b7b786162ea0e5632e1cdececd0f/img/Logo%20Buscador.png)
+![Logo Buscador](https://github.com/sebaao/DWFS-Proyecto-3/assets/140351890/52d4eeb2-98a9-4a12-b24e-49852cc7891f)
+
 
 * [1. Introducción](#1-introduccion)
 * [2. Enlace](#2-enlace)
