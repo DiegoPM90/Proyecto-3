@@ -16,12 +16,10 @@
 En este proyecto, nos propusimos crear una página web dinámica que respondiera al requerimiento del Proyecto 3 del Bootcamp UDD DWFS, de consumir una API para visualizar datos a través de Chart.js. Nuestro equipo, conformado por Sebastián Aburto, José Ángel Valdés, Diego Pizarro y Paz Flores seleccionó la API de [Animales Disponibles para Adopción en Chile](https://huachitos.cl/api/animales), que proporciona datos sobre perros y gatos que buscan un hogar en distintas comunas del país. Este sitio podría ser una propuesta para fundaciones que busquen promover la adopción responsable de animales y concientizar sobre la situación de los animales abandonados en el país. Nuestra página web permite ver el listado de los animales disponibles, y visualizar gráficos de barras sobre la distribución de los animales según diferentes criterios.
 
 ## 2. Enlace
-[Url del proyecto](https://sebaao.github.io/DWFS-Proyecto-3/)
+[Url del proyecto](https://diegopm90.github.io/Proyecto-3/index.html)  
 
 
-Vínculo para visualizar la Página Web: [Enlace] (https://sebaao.github.io/DWFS-Proyecto-3/)
-
-
+Vínculo para visualizar la Página Web: [Enlace] (https://diegopm90.github.io/Proyecto-3/index.html)
 
 
 ## 3. Descripción
